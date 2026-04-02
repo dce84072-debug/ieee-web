@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DICON 2027 - IEEE Conference Website (React Version)
 
 This is the React.js version of the DICON 2027 conference website, converted from the original HTML/CSS/JS implementation.
@@ -170,6 +169,3 @@ For any questions about the React version of this website, please contact the de
 - Email: info@dicon2027.org
 - Website: www.dicon2027.org
 - Phone: +91-XXXXXXXXXX
-=======
-# dceweb
->>>>>>> ab981c2960623b545db18db471dfbb429bb929d2
