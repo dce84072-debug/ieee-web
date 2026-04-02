@@ -128,7 +128,7 @@ const Registration = () => {
               <li><b>Under Process</b></li>
             </ul>
             <p>After payment, upload proof or email to: <b>dicon.dce@gmail.com</b></p>
-            <p><button href="#" style={{ backgroundColor: '#28a745', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', fontSize: '16px', textDecoration: 'none' }}>Proceed to Payment</button></p>
+            <p><button href="#" style={{ backgroundColor: '#dc3545', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', fontSize: '16px', textDecoration: 'none' }}>Proceed to Payment</button></p>
           </div>
         </main>
       </div>
