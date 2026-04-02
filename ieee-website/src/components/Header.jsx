@@ -30,7 +30,7 @@ const Header = () => {
         <div className="header-container">
           <div className="header-logo left-logo">
             <img
-              src="/images/dce-logo.png"
+              src="/images/dce-logo2.png"
               alt="Dronacharya College of Engineering Logo"
             />
           </div>

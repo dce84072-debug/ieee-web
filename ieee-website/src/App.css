@@ -415,7 +415,7 @@ body {
 .header-container {
   max-width: 1280px;
   margin: 0 auto;
-
+  
   display: flex;
   align-items: center; /* vertical centering */
   justify-content: space-between;
@@ -454,9 +454,10 @@ body {
 }
 
 .left-logo img {
-  max-width: 150px;
-  transform: scale(1.4);
+  max-width: 120px;
+  transform: scale(2.0);
   transform-origin: left center;
+  margin-right: 70px;
 }
 
 .right-logo img {
