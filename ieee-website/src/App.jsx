@@ -26,6 +26,10 @@ import Contact from './pages/Contact';
 
 import Plagiarism from './pages/Plagiarism';
 
+import AuthorSubmission from './pages/AuthorSubmission';
+
+import CameraSubmission from './pages/CameraSubmission';
+
 import './App.css';
 
 
@@ -63,6 +67,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/plagiarism" element={<Plagiarism />} />
+
+          <Route path="/author-submission" element={<AuthorSubmission />} />
+
+          <Route path="/camera-submission" element={<CameraSubmission />} />
 
         </Routes>
 
