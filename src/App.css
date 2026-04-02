@@ -94,8 +94,8 @@ body {
 }
 
 /* Registration button styling */
-.top-nav ul li a[href="/registration"] {
-  background-color: #28a745;
+.top-nav ul li a[href="registration.html"] {
+  background-color: #dc3545;
   color: var(--white);
   font-weight: 600;
   border-radius: 4px;
@@ -103,12 +103,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.top-nav ul li a[href="/registration"]:hover {
-  background-color: #218838;
+.top-nav ul li a[href="registration.html"]:hover {
+  background-color: #c82333;
   color: var(--white);
   border-bottom: none;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
 }
 
 .content {
@@ -328,15 +328,14 @@ body {
 
 .hero-image {
   width: 100%;
+  aspect-ratio: 16 / 6;
   overflow: hidden;
-  background-color: #f5f5f5;
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 @media (max-width: 768px) {

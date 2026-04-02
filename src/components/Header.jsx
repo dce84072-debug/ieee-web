@@ -14,10 +14,6 @@ const Header = () => {
     setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
   };
 
-  const handleLinkClick = () => {
-    setOpenDropdown(null);
-  };
-
   const isActive = (href) => {
     const path = location.pathname === '/' ? '' : location.pathname;
     if (path === '' && href === '') return true;
@@ -63,18 +59,18 @@ const Header = () => {
         </button>
 
         <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/" className={isActive('') ? 'active' : ''} onClick={handleLinkClick}>Home</Link></li>
-          <li><Link to="/institute" className={isActive('institute') ? 'active' : ''} onClick={handleLinkClick}>About Institute</Link></li>
-          <li><Link to="/conference" className={isActive('conference') ? 'active' : ''} onClick={handleLinkClick}>About Conference</Link></li>
-          <li><Link to="/tracks" className={isActive('tracks') ? 'active' : ''} onClick={handleLinkClick}>Call for Papers</Link></li>
+          <li><Link to="/" className={isActive('') ? 'active' : ''}>Home</Link></li>
+          <li><Link to="/institute" className={isActive('institute') ? 'active' : ''}>About Institute</Link></li>
+          <li><Link to="/conference" className={isActive('conference') ? 'active' : ''}>About Conference</Link></li>
+          <li><Link to="/tracks" className={isActive('tracks') ? 'active' : ''}>Call for Papers</Link></li>
 
           <li className={`nav-item has-dropdown ${openDropdown === 'committee' ? 'open' : ''}`}>
             <button className="dropdown-btn" onClick={() => toggleDropdown('committee')}>
               Conference Committee <span className="dropdown-arrow">▾</span>
             </button>
             <ul className="dropdown-list">
-              <li><Link to="/committee" className={isActive('committee') ? 'active' : ''} onClick={handleLinkClick}>Organising Committee</Link></li>
-              <li><Link to="/advisory" className={isActive('advisory') ? 'active' : ''} onClick={handleLinkClick}>Advisory Committee</Link></li>
+              <li><Link to="/committee" className={isActive('committee') ? 'active' : ''}>Organising Committee</Link></li>
+              <li><Link to="/advisory" className={isActive('advisory') ? 'active' : ''}>Advisory Committee</Link></li>
             </ul>
           </li>
 
@@ -83,22 +79,13 @@ const Header = () => {
               Speakers <span className="dropdown-arrow">▾</span>
             </button>
             <ul className="dropdown-list">
-              <li><Link to="/plenary" className={isActive('plenary') ? 'active' : ''} onClick={handleLinkClick}>Plenary Speakers</Link></li>
-              <li><Link to="/keynote" className={isActive('keynote') ? 'active' : ''} onClick={handleLinkClick}>Keynote Speakers</Link></li>
+              <li><Link to="/plenary" className={isActive('plenary') ? 'active' : ''}>Plenary Speakers</Link></li>
+              <li><Link to="/keynote" className={isActive('keynote') ? 'active' : ''}>Keynote Speakers</Link></li>
             </ul>
           </li>
-          <li><Link to="/registration" className={isActive('registration') ? 'active' : ''} style={{ backgroundColor: '#dc3545', color: 'white', padding: '8px 16px', borderRadius: '4px', textDecoration: 'none' }} onClick={handleLinkClick}>Registration</Link></li>
-          <li className={`nav-item has-dropdown ${openDropdown === 'authors' ? 'open' : ''}`}>
-            <button className="dropdown-btn" onClick={() => toggleDropdown('authors')}>
-              Authors <span className="dropdown-arrow">▾</span>
-            </button>
-            <ul className="dropdown-list">
-              <li><Link to="/author-submission" className={isActive('author-submission') ? 'active' : ''} onClick={handleLinkClick}>Author Submission</Link></li>
-              <li><Link to="/camera-submission" className={isActive('camera-submission') ? 'active' : ''} onClick={handleLinkClick}>Camera Submission</Link></li>
-            </ul>
-          </li>
-          <li><Link to="/contact" className={isActive('contact') ? 'active' : ''} onClick={handleLinkClick}>Contact Us</Link></li>
-          <li><Link to="/plagiarism" className={isActive('plagiarism') ? 'active' : ''} onClick={handleLinkClick}>Plagiarism Policy</Link></li>
+          <li><Link to="/registration" className={isActive('registration') ? 'active' : ''}>Registration</Link></li>
+          <li><Link to="/contact" className={isActive('contact') ? 'active' : ''}>Contact Us</Link></li>
+          <li><Link to="/plagiarism" className={isActive('plagiarism') ? 'active' : ''}>Plagiarism Policy</Link></li>
         </ul>
       </nav>
     </>
