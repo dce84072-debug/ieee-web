@@ -83,7 +83,7 @@ const Header = () => {
               <li><Link to="/keynote" className={isActive('keynote') ? 'active' : ''}>Keynote Speakers</Link></li>
             </ul>
           </li>
-          <li><Link to="/registration" className={isActive('registration') ? 'active' : ''}>Registration</Link></li>
+          <li><Link to="/registration" className={isActive('registration') ? 'active' : ''} style={{ backgroundColor: '#dc3545', color: 'white', padding: '8px 16px', borderRadius: '4px', textDecoration: 'none' }}>Registration</Link></li>
           <li><Link to="/contact" className={isActive('contact') ? 'active' : ''}>Contact Us</Link></li>
           <li><Link to="/plagiarism" className={isActive('plagiarism') ? 'active' : ''}>Plagiarism Policy</Link></li>
         </ul>
