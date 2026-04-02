@@ -12,6 +12,8 @@ import Keynote from './pages/Keynote';
 import Registration from './pages/Registration';
 import Contact from './pages/Contact';
 import Plagiarism from './pages/Plagiarism';
+import AuthorSubmission from './pages/AuthorSubmission';
+import CameraSubmission from './pages/CameraSubmission';
 import './App.css';
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path="/plenary" element={<Plenary />} />
           <Route path="/keynote" element={<Keynote />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/author-submission" element={<AuthorSubmission />} />
+          <Route path="/camera-submission" element={<CameraSubmission />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/plagiarism" element={<Plagiarism />} />
         </Routes>
