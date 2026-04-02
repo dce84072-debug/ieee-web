@@ -63,10 +63,10 @@ const Header = () => {
         </button>
 
         <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/" className={isActive('') ? 'active' : ''}>Home</Link></li>
-          <li><Link to="/institute" className={isActive('institute') ? 'active' : ''}>About Institute</Link></li>
-          <li><Link to="/conference" className={isActive('conference') ? 'active' : ''}>About Conference</Link></li>
-          <li><Link to="/tracks" className={isActive('tracks') ? 'active' : ''}>Call for Papers</Link></li>
+          <li><Link to="/" className={isActive('') ? 'active' : ''} onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/institute" className={isActive('institute') ? 'active' : ''} onClick={handleLinkClick}>About Institute</Link></li>
+          <li><Link to="/conference" className={isActive('conference') ? 'active' : ''} onClick={handleLinkClick}>About Conference</Link></li>
+          <li><Link to="/tracks" className={isActive('tracks') ? 'active' : ''} onClick={handleLinkClick}>Call for Papers</Link></li>
 
           <li className={`nav-item has-dropdown ${openDropdown === 'committee' ? 'open' : ''}`}>
             <button className="dropdown-btn" onClick={() => toggleDropdown('committee')}>
@@ -87,7 +87,7 @@ const Header = () => {
               <li><Link to="/keynote" className={isActive('keynote') ? 'active' : ''} onClick={handleLinkClick}>Keynote Speakers</Link></li>
             </ul>
           </li>
-          <li><Link to="/registration" className={isActive('registration') ? 'active' : ''} style={{ backgroundColor: '#dc3545', color: 'white', padding: '8px 16px', borderRadius: '4px', textDecoration: 'none' }}>Registration</Link></li>
+          <li><Link to="/registration" className={isActive('registration') ? 'active' : ''} style={{ backgroundColor: '#dc3545', color: 'white', padding: '8px 16px', borderRadius: '4px', textDecoration: 'none' }} onClick={handleLinkClick}>Registration</Link></li>
           <li className={`nav-item has-dropdown ${openDropdown === 'authors' ? 'open' : ''}`}>
             <button className="dropdown-btn" onClick={() => toggleDropdown('authors')}>
               Authors <span className="dropdown-arrow">▾</span>
@@ -97,8 +97,8 @@ const Header = () => {
               <li><Link to="/camera-submission" className={isActive('camera-submission') ? 'active' : ''} onClick={handleLinkClick}>Camera Submission</Link></li>
             </ul>
           </li>
-          <li><Link to="/contact" className={isActive('contact') ? 'active' : ''}>Contact Us</Link></li>
-          <li><Link to="/plagiarism" className={isActive('plagiarism') ? 'active' : ''}>Plagiarism Policy</Link></li>
+          <li><Link to="/contact" className={isActive('contact') ? 'active' : ''} onClick={handleLinkClick}>Contact Us</Link></li>
+          <li><Link to="/plagiarism" className={isActive('plagiarism') ? 'active' : ''} onClick={handleLinkClick}>Plagiarism Policy</Link></li>
         </ul>
       </nav>
     </>
