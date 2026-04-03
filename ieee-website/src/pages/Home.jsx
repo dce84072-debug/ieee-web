@@ -5,7 +5,7 @@ const Home = () => {
     <>
       <div className="hero-image">
         <img
-           src="/images/poster.png"
+           src="/images/college.jpg"
           alt="Dronacharya College of Engineering"
         />
       </div>
