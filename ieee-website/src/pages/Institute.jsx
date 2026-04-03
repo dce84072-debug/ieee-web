@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Institute = () => {
   const images = [
+    "/images/college.jpg",
     "/images/dce-1.jpg",
     "/images/dce-2.jpg",
     "/images/dce-3.jpg",
@@ -15,10 +16,12 @@ const Institute = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setImageError(false);
     }, 1500); // Change image every 1.5 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
@@ -26,31 +29,59 @@ const Institute = () => {
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setImageError(false);
   };
 
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setImageError(false);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    console.error('Failed to load image:', images[currentIndex]);
+    console.log('Available images:', images);
+    console.log('Current index:', currentIndex);
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <main className="content">
-          <div className="gallery-container">
-            <button className="nav-btn left" onClick={prevImage}>
-              &#10094;
-            </button>
+    <>
+      <div className="gallery-container">
+        <button className="nav-btn left" onClick={prevImage}>
+          &#10094;
+        </button>
 
-            <img
-              id="galleryImage"
-              src={images[currentIndex]}
-              alt="Gallery Image"
-            />
-
-            <button className="nav-btn right" onClick={nextImage}>
-              &#10095;
-            </button>
+        <img
+          id="galleryImage"
+          src={images[currentIndex]}
+          alt="Gallery Image"
+          onError={handleImageError}
+          style={{ 
+            display: imageError ? 'none' : 'block',
+            backgroundColor: '#f5f7f8'
+          }}
+        />
+        {imageError && (
+          <div style={{ 
+            width: '100%', 
+            height: '450px', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            backgroundColor: '#f5f7f8',
+            color: '#666',
+            fontSize: '16px'
+          }}>
+            Image loading failed. Please check the image path.
           </div>
+        )}
+
+        <button className="nav-btn right" onClick={nextImage}>
+          &#10095;
+        </button>
+      </div>
+      <div className="page-layout">
+        <main className="content">
           <div className="page-header">
             <p>
               <a
@@ -142,7 +173,7 @@ const Institute = () => {
           </div>
         </main>
       </div>
-    </div>
+    </>
   );
 };
 
