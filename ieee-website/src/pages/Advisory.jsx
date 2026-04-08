@@ -59,6 +59,14 @@ const Advisory = () => {
                 Japan
               </li>
               <li>
+                <li>
+                  Prof. (Dr.) Dharm Singh Jat, Professor of Computer Science & UNESCO
+                  Chairholder, Secure High-performance Computing for Higher
+                  Education and Research, Namibia University of Science and
+                  Technology, Windhoek, Namibia
+                </li>
+              </li>
+              <li>
                 Dr. Richa Sharma, Assistant Professor, Department of
                 Mathematics, Computer science & Digital Forensics, Commonwealth
                 University, Pennsylvania (PA), USA
