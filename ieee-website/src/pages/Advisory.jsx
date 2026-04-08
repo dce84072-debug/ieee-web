@@ -60,7 +60,7 @@ const Advisory = () => {
               </li>
               <li>
                 <li>
-                  Prof. Dharm Singh Jat, Professor of Computer Science & UNESCO
+                  Prof. (Dr.) Dharm Singh Jat, Professor of Computer Science & UNESCO
                   Chairholder, Secure High-performance Computing for Higher
                   Education and Research, Namibia University of Science and
                   Technology, Windhoek, Namibia
